@@ -1,0 +1,6 @@
+.weather_block{
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+}

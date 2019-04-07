@@ -1,0 +1,38 @@
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col">-->
+<!--      <div class="card" *ngFor="let element of privat24">-->
+<!--        <div *ngIf="element.ccy == 'USD'" class="privat24">-->
+<!--          <div class="el">{{element.base_ccy}}</div>-->
+<!--          <div class="el">{{element.buy}}</div>-->
+<!--          <div class="el">{{element.ccy}}</div>-->
+<!--          <div class="el">{{element.sale}}</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="container-fluid main_app_bck">
+  <div class="row">
+    <div class="col-lg-3">
+
+    </div>
+    <div class="col-lg-6">
+      <div class="card one_article" *ngFor="let article of newsarr.articles">
+        <a [href]="article.url" target="_blank" class="el">
+          <h4>{{article.title}}</h4>
+          <p><strong>Published:</strong> {{article.publishedAt}}</p>
+          <img class="article_image" [src]="article.urlToImage">
+          <!--          <p>{{article.description}}</p>-->
+          <p>{{article.content}}</p>
+<!--          <a >Read more</a>-->
+          <blockquote><strong>Author:</strong> {{article.author}}</blockquote>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-3">
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.main_app_bck {
+  /*background: linear-gradient(#ffffff, #999999);*/
+  background-image: url("../../assets/images/1.jpg");
+  /*margin-top: 5px;*/
+  /*height: 450px;*/
+
+}
+
+.privat24 {
+  /*display: block;*/
+  /*width: 100px;*/
+  /*height: 100px;*/
+  /*!*padding: 25px;*!*/
+  /*background-color: #dddddd;*/
+  /*margin: 10px;*/
+  /*font-size: 10px;*/
+  /*border-radius: 5%;*/
+  /*!*font-weight: bold;*!*/
+  /*box-shadow: blue 1px 1px 4px 1px;*/
+  /*text-align: center;*/
+  /*vertical-align: middle;*/
+}
+
+.article_image {
+  max-width: 500px;
+  height: auto;
+  display: block;
+  text-align: center;
+}
+
+.el {
+  /*font-family: 'Merriweather', serif;*/
+  font-family: 'ZCOOL XiaoWei', serif;
+  display: inline;
+  /*width: 600px;*/
+  margin: 0px;
+  background-color: #fff;
+  text-align: justify;
+  color: #000;
+  text-decoration: none;
+  /*max-width: 1024px;*/
+  /*max-height: 600px;*/
+}
+
+.el:hover {
+  box-shadow: #aaa 0px 0px 2px 2px;
+  cursor: pointer;
+}
+
+.one_article {
+  margin: 10px;
+}

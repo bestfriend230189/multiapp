@@ -1,0 +1,42 @@
+.my_btn{
+  /*background-color: #988776;*/
+  /*background: linear-gradient(#988776, #546576);*/
+  /*background: radial-gradient(#988776, #546576);*/
+  display: inline-block;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #876aad;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: #fff 0px 0px 0px 0px;
+  font-weight: bold;
+  border-radius: 5%;
+}
+.my_btn:hover{
+  /*background-color: #7633aa;*/
+  /*background: linear-gradient(#546576, #988776);*/
+  /*background: radial-gradient(#546576, #988776);*/
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  box-shadow: #666 0px 0px 1px 1px;
+}
+.my_btn_act{
+  /*background: linear-gradient(#aaaddd, #ccc111);*/
+  /*background: radial-gradient(#546576, #988776);*/
+  background: rgba(50, 50, 50, 0.5);
+  color: #fff;
+}
+
+
+li{
+  display: inline-block;
+}
+
+.main_app_bck{
+  /*background: linear-gradient(#ffffff, #999999);*/
+  background-image: url("../assets/images/1.jpg");
+  border-bottom: blue;
+  box-shadow: #fff 0px 0px 3px 1px;
+}

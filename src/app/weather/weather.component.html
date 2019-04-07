@@ -1,0 +1,42 @@
+<div class="container-fluid main_app_bck">
+  <div class="row">
+    <div class="col-lg-5"></div>
+    <div class="col">
+      <div class="weather_block">
+        <div class="card-group">
+          <div class="btn btn-outline-info">
+            <input required type="text" placeholder="Enter City.." [(ngModel)]="citytofind">
+            <button (click)="getWeather()">Find</button>
+<!--            <button (click)="getWeatherByLocation()">Find weather by my location</button>-->
+            <div *ngIf="citytofind != null && tryfind != false">
+              <hr>
+              <div class="card-header">
+                {{wetherarr.sys.country}}
+                {{wetherarr.name}}
+
+              </div>
+              <div class="card-body">
+                {{wetherarr.weather[0].description}}
+                <br>
+                <img [src]="img_base_url+wetherarr.weather[0].icon+'.png'">
+              </div>
+              Temp: {{wetherarr.main.temp - 273.15 | number}}&deg; C
+              <hr>
+              <p>Pressure: {{wetherarr.main.pressure}}</p>
+              <p>Temp main: {{wetherarr.main.temp_min - 273.15 | number}}&deg; C </p>
+              <p>Temp max: {{wetherarr.main.temp_max - 273.15 | number}}&deg; C</p>
+              <hr>
+              <p>Wind speed: {{wetherarr.wind.speed}}m/s</p>
+              <p>Wind deg: {{wetherarr.wind.deg}}</p>
+              <hr>
+              <p>Sunrise: {{wetherarr.sys.sunrise * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+              <p>Sunset: {{wetherarr.sys.sunset * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+            </div>
+            <div id="demo"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
