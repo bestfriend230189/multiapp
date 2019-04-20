@@ -10,7 +10,6 @@ const routes: Routes = [
   // {path: 'features', component: FeaturesComponent},
   // {path: 'docs', component: DocsComponent},
   // {path: 'resources', component: ResourcesComponent},
-  // {path: 'blog', component: BlogComponent},
   {path: 'calendar', component: CalendarComponent},
   {path: 'weather', component: WeatherComponent}
   // {path: 'blog/:id/:title/:datainfo', component: BlogPostComponent},

@@ -13,20 +13,16 @@
       <li><a routerLink="/weather" routerLinkActive="my_btn_act" class="my_btn">Weather</a></li>
     </ul>
   </div>
+  <div *ngIf="auth.user$ | async as user">
+    <h3>Logged in as {{ user.displayName }}</h3>
+    <img src="{{ user.photoURL }}" width="50px">
+  </div>
+
+
+  <button (click)="auth.login()" class="button is-danger">Login with Google</button>
+  <button (click)="auth.logout()" class="button">Logout</button>
+
 </div>
 <router-outlet></router-outlet>
 
-<!--<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>-->
-<!--<script>-->
-  <!--// Initialize Firebase-->
-  <!--var config = {-->
-    <!--apiKey: "AIzaSyCaG7Jiv5NuWConLc8h9TstKw9RWJ5joP0",-->
-    <!--authDomain: "angrylar-requests.firebaseapp.com",-->
-    <!--databaseURL: "https://angrylar-requests.firebaseio.com",-->
-    <!--projectId: "angrylar-requests",-->
-    <!--storageBucket: "angrylar-requests.appspot.com",-->
-    <!--messagingSenderId: "1012396963794"-->
-  <!--};-->
-  <!--firebase.initializeApp(config);-->
-<!--</script>-->
 </div>

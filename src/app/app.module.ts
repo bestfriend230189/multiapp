@@ -4,21 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-// import { DocsComponent } from './docs/docs.component';
-// import { FeaturesComponent } from './features/features.component';
-// import { ResourcesComponent } from './resources/resources.component';
-// import { BlogComponent } from './blog/blog.component';
-// import { BlogPostComponent } from './blog-post/blog-post.component';
-// import { BlogsinglepostComponent } from './blogsinglepost/blogsinglepost.component';
-// import { ErrorComponent } from './error/error.component';
-// import { AddpostcomponentComponent } from './addpostcomponent/addpostcomponent.component';
 import { FormsModule } from '@angular/forms';
 import { PostService } from './post.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './weather/weather.component';
 import {DBmanagerService} from './DBmanager.service';
 import { CalendarComponent } from './calendar/calendar.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
+const myFirebaseConfig = {
+  apiKey: 'AIzaSyBhN6hLEjhooTXP80mUzPdlZ_ottCTDSoI',
+  authDomain: 'multiappcalendar.firebaseapp.com',
+  databaseURL: 'https://multiappcalendar.firebaseio.com',
+  projectId: 'multiappcalendar',
+  storageBucket: 'multiappcalendar.appspot.com',
+  messagingSenderId: '711436483886'
+};
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { CalendarComponent } from './calendar/calendar.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(myFirebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [PostService, DBmanagerService],
   bootstrap: [AppComponent]

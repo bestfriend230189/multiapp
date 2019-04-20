@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-calendar',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalendarComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private auth: AuthService) {
   }
 
+  ngOnInit() {
+
+  }
 }
